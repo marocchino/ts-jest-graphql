@@ -3,20 +3,14 @@
     "target": "esnext",
     "module": "esnext",
     "strict": true,
+    "noEmit": true, // so that it doesn't emit files in case you accidentally do not provide good config file
     "jsx": "preserve",
-    "importHelpers": true,
+    "importHelpers": false, // if you want this to be true, you'll need to add tslib as a dep.
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "sourceMap": true,
-    "baseUrl": ".",
-    "types": ["node", "jest"],
-    "paths": {
-      "@/*": ["src/*"]
-    },
     "lib": ["es2015", "dom", "dom.iterable", "scripthost", "es7", "esnext"]
-  },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  }
 }
