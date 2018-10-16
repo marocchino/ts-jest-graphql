@@ -1,8 +1,7 @@
 module.exports = {
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
-  testMatch: ["<rootDir>*.spec.(js|jsx|ts|tsx)"],
+  preset: 'ts-jest',
   transform: {
-    "\\.graphql$": "jest-transform-graphql",
-    "\\.tsx?$": "ts-jest"
-  }
-};
+    '\\.ts$': 'ts-jest',
+    '\\.graphql$': 'jest-transform-graphql',
+  },
+}
